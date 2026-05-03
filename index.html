@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVEX - Calidad y Descanso</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#inicio"><div class="logo-placeholder brand-name">CARVEX</div></a>
+            </div>
+            <div class="search-bar">
+                <select class="category-select" onchange="if(this.value){document.getElementById(this.value).scrollIntoView({behavior:'smooth'})}">
+                    <option value="">🔍 Ver productos...</option>
+                    <option value="sabanas">Sábanas</option>
+                    <option value="edredones">Edredones</option>
+                    <option value="colchas">Colchas</option>
+                    <option value="protectores">Protectores</option>
+                    <option value="carpas">Carpas para moto</option>
+                    <option value="cortinas">Cortinas</option>
+                    <option value="camas-perro">Camas para perro</option>
+                </select>
+            </div>
+            <div class="header-logo-image"><img src="imagenes/logo.png" alt="Logo CARVEX"></div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#sabanas">Sábanas</a></li>
+                <li><a href="#edredones">Edredones</a></li>
+                <li><a href="#colchas">Colchas</a></li>
+                <li><a href="#protectores">Protectores</a></li>
+                <li><a href="#carpas">Carpas para moto</a></li>
+                <li><a href="#cortinas">Cortinas</a></li>
+                <li><a href="#camas-perro">Camas para perro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="inicio">
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel-slides">
+                    <div class="slide active">
+                        <img class="hero-carousel-image" src="imagenes/carrusel/comodo.avif" alt="Productos cómodos para el hogar">
+                        <div class="slide-content"><h2>Bienvenidos a CARVEX</h2><p>Sábanas, edredones, cortinas y mucho más para tu hogar.</p></div>
+                    </div>
+                    <div class="slide">
+                        <img class="hero-carousel-image" src="imagenes/carrusel/imagen1.png" alt="Descanso y hogar">
+                        <div class="slide-content"><h2>Protege tu moto</h2><p>Carpas resistentes para cuidar tu vehículo.</p></div>
+                    </div>
+                    <div class="slide">
+                        <img class="hero-carousel-image" src="imagenes/carrusel/perro.png" alt="Camas para perro">
+                        <div class="slide-content"><h2>Comodidad para tu mascota</h2><p>Camas suaves y prácticas para perros pequeños y grandes.</p></div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+                <div class="carousel-dots"><span class="dot active" onclick="currentSlide(1)"></span><span class="dot" onclick="currentSlide(2)"></span><span class="dot" onclick="currentSlide(3)"></span></div>
+            </div>
+        </div>
+        <a href="https://wa.me/573142926642" class="whatsapp-float" title="WhatsApp" target="_blank">💬</a>
+    </section>
+
+    <section class="categories-section">
+        <div class="container"><div class="categories-grid">
+            <a href="#sabanas" class="category-card"><div class="category-img-placeholder">🛏️</div><h3>Sábanas</h3></a>
+            <a href="#edredones" class="category-card"><div class="category-img-placeholder">🛋️</div><h3>Edredones</h3></a>
+            <a href="#colchas" class="category-card"><div class="category-img-placeholder">🌙</div><h3>Colchas</h3></a>
+            <a href="#protectores" class="category-card"><div class="category-img-placeholder">🛡️</div><h3>Protectores</h3></a>
+            <a href="#carpas" class="category-card"><div class="category-img-placeholder">🏍️</div><h3>Carpas para moto</h3></a>
+            <a href="#cortinas" class="category-card"><div class="category-img-placeholder">🪟</div><h3>Cortinas</h3></a>
+            <a href="#camas-perro" class="category-card"><div class="category-img-placeholder">🐶</div><h3>Camas para perro</h3></a>
+        </div></div>
+    </section>
+
+    <section class="products-section" id="sabanas"><div class="container"><h2 class="section-title">Sábanas</h2>            <div class="small-carousel product-carousel" id="sabanas-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/sabanas/cobija (1).jpeg" alt="Sábana 1"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (2).jpeg" alt="Sábana 2"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (3).jpeg" alt="Sábana 3"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (4).jpeg" alt="Sábana 4"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (5).jpeg" alt="Sábana 5"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (6).jpeg" alt="Sábana 6"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (7).jpeg" alt="Sábana 7"></div>
+                    <div class="small-slide"><img src="imagenes/sabanas/cobija (8).jpeg" alt="Sábana 8"></div>
+                </div>
+                <button class="small-carousel-btn prev" onclick="changeProductSlide(this, -1)">&#10094;</button>
+                <button class="small-carousel-btn next" onclick="changeProductSlide(this, 1)">&#10095;</button>                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 8</div>
+            </div>            <div class="products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛏️</div><p class="product-name">Cama sencilla</p><p class="product-price">$33.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛏️</div><p class="product-name">Semidoble</p><p class="product-price">$37.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛏️</div><p class="product-name">Doble</p><p class="product-price">$40.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛏️</div><p class="product-name">Queen</p><p class="product-price">$50.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛏️</div><p class="product-name">King</p><p class="product-price">$60.000 COP</p></a>
+            </div></div></section>
+    <section class="category-banner"><div class="container"><h2>Edredones</h2></div></section>
+    <section class="products-section" id="edredones"><div class="container"><h2 class="section-title">Edredones</h2>            <div class="small-carousel product-carousel" id="edredones-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/edredones/edredon (1).jpeg" alt="Edredón 1"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (2).jpeg" alt="Edredón 2"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (3).jpeg" alt="Edredón 3"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (4).jpeg" alt="Edredón 4"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (5).jpeg" alt="Edredón 5"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (6).jpeg" alt="Edredón 6"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (7).jpeg" alt="Edredón 7"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (8).jpeg" alt="Edredón 8"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (9).jpeg" alt="Edredón 9"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (10).jpeg" alt="Edredón 10"></div>
+                    <div class="small-slide"><img src="imagenes/edredones/edredon (11).jpeg" alt="Edredón 11"></div>
+                </div>
+                <button class="small-carousel-btn prev" onclick="changeProductSlide(this, -1)">&#10094;</button>
+                <button class="small-carousel-btn next" onclick="changeProductSlide(this, 1)">&#10095;</button>                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 11</div>
+            </div>            <div class="products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛋️</div><p class="product-name">Edredón sencillo</p><p class="product-price">$0 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛋️</div><p class="product-name">Edredón doble</p><p class="product-price">$0 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛋️</div><p class="product-name">Edredón queen</p><p class="product-price">$0 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛋️</div><p class="product-name">Edredón king</p><p class="product-price">$0 COP</p></a>
+            </div></div></section>
+    <section class="category-banner"><div class="container"><h2>Colchas</h2></div></section>
+    <section class="products-section" id="colchas"><div class="container"><h2 class="section-title">Colchas</h2>            <div class="small-carousel product-carousel" id="colchas-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/colchas/colcha (1).jpeg" alt="Colcha 1"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (2).jpeg" alt="Colcha 2"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (3).jpeg" alt="Colcha 3"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (4).jpeg" alt="Colcha 4"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (5).jpeg" alt="Colcha 5"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (6).jpeg" alt="Colcha 6"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (7).jpeg" alt="Colcha 7"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (8).jpeg" alt="Colcha 8"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (9).jpeg" alt="Colcha 9"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (10).jpeg" alt="Colcha 10"></div>
+                    <div class="small-slide"><img src="imagenes/colchas/colcha (11).jpeg" alt="Colcha 11"></div>
+                </div>
+                <button class="small-carousel-btn prev" onclick="changeProductSlide(this, -1)">&#10094;</button>
+                <button class="small-carousel-btn next" onclick="changeProductSlide(this, 1)">&#10095;</button>                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 11</div>
+            </div>            <div class="products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🌙</div><p class="product-name">Cama sencilla</p><p class="product-price">$60.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🌙</div><p class="product-name">Semidoble</p><p class="product-price">$65.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🌙</div><p class="product-name">Doble</p><p class="product-price">$70.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🌙</div><p class="product-name">Queen</p><p class="product-price">$80.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🌙</div><p class="product-name">King</p><p class="product-price">$90.000 COP</p></a>
+            </div></div></section>
+    <section class="category-banner"><div class="container"><h2>Protectores de colchón</h2></div></section>
+    <section class="products-section" id="protectores"><div class="container"><h2 class="section-title">Protectores de colchón</h2>            <div class="small-carousel product-carousel" id="protectores-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/protectores/protector (1).jpeg" alt="Protector 1"></div>
+                    <div class="small-slide"><img src="imagenes/protectores/protector (2).jpeg" alt="Protector 2"></div>
+                    <div class="small-slide"><img src="imagenes/protectores/protector (3).jpeg" alt="Protector 3"></div>
+                    <div class="small-slide"><img src="imagenes/protectores/protector (4).jpeg" alt="Protector 4"></div>
+                    <div class="small-slide"><img src="imagenes/protectores/protector (5).jpeg" alt="Protector 5"></div>
+                    <div class="small-slide"><img src="imagenes/protectores/protector (6).jpeg" alt="Protector 6"></div>
+                </div>
+                <button class="small-carousel-btn prev" onclick="changeProductSlide(this, -1)">&#10094;</button>
+                <button class="small-carousel-btn next" onclick="changeProductSlide(this, 1)">&#10095;</button>                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 6</div>
+            </div>            <div class="products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛡️</div><p class="product-name">Cama sencilla</p><p class="product-price">$48.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛡️</div><p class="product-name">Semidoble</p><p class="product-price">$46.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛡️</div><p class="product-name">Doble</p><p class="product-price">$47.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛡️</div><p class="product-name">Queen</p><p class="product-price">$55.000 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🛡️</div><p class="product-name">King</p><p class="product-price">$65.000 COP</p></a>
+            </div></div></section>
+    <section class="category-banner"><div class="container"><h2>Carpas para moto</h2></div></section>
+    <section class="products-section" id="carpas"><div class="container"><h2 class="section-title">Carpas para moto</h2>            <div class="small-carousel product-carousel" id="carpas-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/carpa para moto/carpa.jpeg" alt="Carpa para moto 1"></div>
+                </div>
+                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 1</div>
+            </div>            <div class="products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🏍️</div><p class="product-name">Unidad</p><p class="product-price">$100.000 COP</p></a>
+            </div></div></section>
+    <section class="category-banner"><div class="container"><h2>Cortinas</h2></div></section>
+    <section class="products-section highlight-section" id="cortinas"><div class="container"><h2 class="section-title">Cortinas</h2>            <div class="small-carousel product-carousel" id="cortinas-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/cortinas/cortina (1).jpeg" alt="Cortina 1"></div>
+                    <div class="small-slide"><img src="imagenes/cortinas/cortina (2).jpeg" alt="Cortina 2"></div>
+                    <div class="small-slide"><img src="imagenes/cortinas/cortina (3).jpeg" alt="Cortina 3"></div>
+                    <div class="small-slide"><img src="imagenes/cortinas/cortina (4).jpeg" alt="Cortina 4"></div>
+                    <div class="small-slide"><img src="imagenes/cortinas/cortina (5).jpeg" alt="Cortina 5"></div>
+                </div>
+                <button class="small-carousel-btn prev" onclick="changeProductSlide(this, -1)">&#10094;</button>
+                <button class="small-carousel-btn next" onclick="changeProductSlide(this, 1)">&#10095;</button>                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 5</div>
+            </div>            <div class="products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🪟</div><p class="product-name">Unidad</p><p class="product-price">$40.000 COP</p></a>
+            </div></div></section>
+    <section class="category-banner"><div class="container"><h2>Camas para perro</h2></div></section>
+    <section class="products-section highlight-section" id="camas-perro"><div class="container"><h2 class="section-title">Camas para perro</h2>            <div class="small-carousel product-carousel" id="camas-perro-carousel" data-index="1">
+                <div class="small-slides">
+                    <div class="small-slide active"><img src="imagenes/camas para perro/cama_p (1).jpeg" alt="Cama para perro 1"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (2).jpeg" alt="Cama para perro 2"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (3).jpeg" alt="Cama para perro 3"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (4).jpeg" alt="Cama para perro 4"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (5).jpeg" alt="Cama para perro 5"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (9).jpeg" alt="Cama para perro 6"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (10).jpeg" alt="Cama para perro 7"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (11).jpeg" alt="Cama para perro 8"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (12).jpeg" alt="Cama para perro 9"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (13).jpeg" alt="Cama para perro 10"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (14).jpeg" alt="Cama para perro 11"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (16).jpeg" alt="Cama para perro 12"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (17).jpeg" alt="Cama para perro 13"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (19).jpeg" alt="Cama para perro 14"></div>
+                    <div class="small-slide"><img src="imagenes/camas para perro/cama_p (20).jpeg" alt="Cama para perro 15"></div>
+                </div>
+                <button class="small-carousel-btn prev" onclick="changeProductSlide(this, -1)">&#10094;</button>
+                <button class="small-carousel-btn next" onclick="changeProductSlide(this, 1)">&#10095;</button>                <div class="small-carousel-counter"><span class="carousel-current">1</span> / 15</div>
+            </div>            <div class="products-grid dog-products-grid">
+                <a href="#" class="product-card"><div class="product-img-placeholder">🐶</div><p class="product-name">Cama para perro pequeña</p><p class="product-price">$0 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🐶</div><p class="product-name">Cama para perro mediana</p><p class="product-price">$0 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🐶</div><p class="product-name">Cama para perro grande</p><p class="product-price">$0 COP</p></a>
+                <a href="#" class="product-card"><div class="product-img-placeholder">🐶</div><p class="product-name">Cama acolchada</p><p class="product-price">$0 COP</p></a>
+            </div></div></section>
+
+    <footer class="main-footer">
+        <div class="container"><div class="footer-content footer-content-single"><div class="footer-section payment-section"><h3>Medios de pago</h3><div class="payment-logos"><div class="logo-placeholder small">BANCOLOMBIA</div><div class="logo-placeholder small">NEQUI</div><div class="logo-placeholder small">DAVIPLATA</div></div></div></div></div>
+        <div class="copyright"><p>Copyright 2026 © CARVEX</p></div>
+    </footer>
+
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-content">
+            <button class="product-modal-close" type="button" onclick="closeProductModal()">&times;</button>
+            <img id="modalProductImage" src="" alt="Producto seleccionado">
+            <div class="product-modal-info"><h2 id="modalProductName">Producto</h2><p id="modalProductDescription">Descripción del producto.</p><p id="modalProductPrice" class="modal-product-price">$0 COP</p><a id="modalBuyButton" class="buy-button" href="https://wa.me/573142926642" target="_blank">Comprar por WhatsApp</a></div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function changeSlide(n) { showSlides(slideIndex += n); }
+        function currentSlide(n) { showSlides(slideIndex = n); }
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) { slides[i].classList.remove("active"); }
+            for (let i = 0; i < dots.length; i++) { dots[i].classList.remove("active"); }
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+        }
+        setInterval(function() { changeSlide(1); }, 5000);
+
+        function changeProductSlide(button, step) {
+            const carousel = button.closest(".small-carousel");
+            const slides = carousel.getElementsByClassName("small-slide");
+            const counter = carousel.querySelector(".carousel-current");
+            let current = parseInt(carousel.dataset.index || "1", 10) + step;
+            if (current > slides.length) { current = 1; }
+            if (current < 1) { current = slides.length; }
+            for (let i = 0; i < slides.length; i++) { slides[i].classList.remove("active"); }
+            slides[current - 1].classList.add("active");
+            carousel.dataset.index = current;
+            if (counter) { counter.textContent = current; }
+        }
+
+        const productModal = document.getElementById("productModal");
+        const modalProductImage = document.getElementById("modalProductImage");
+        const modalProductName = document.getElementById("modalProductName");
+        const modalProductDescription = document.getElementById("modalProductDescription");
+        const modalProductPrice = document.getElementById("modalProductPrice");
+        const modalBuyButton = document.getElementById("modalBuyButton");
+
+        document.querySelectorAll(".product-card").forEach(function(card) {
+            card.addEventListener("click", function(event) {
+                event.preventDefault();
+                openProductModal(card);
+            });
+        });
+
+        function openProductModal(card) {
+            const section = card.closest("section");
+            const productName = card.querySelector(".product-name").textContent.trim();
+            const productPrice = card.querySelector(".product-price").textContent.trim();
+            const sectionTitle = section.querySelector(".section-title").textContent.trim();
+            const image = section.querySelector(".small-slide.active img") || section.querySelector(".small-slide img");
+            const message = "Hola, quiero comprar: " + sectionTitle + " - " + productName + " (" + productPrice + ")";
+            modalProductName.textContent = productName;
+            modalProductPrice.textContent = productPrice;
+            modalProductDescription.textContent = "Producto de " + sectionTitle.toLowerCase() + " de CARVEX. Cómodo, práctico y pensado para el uso diario.";
+            modalBuyButton.href = "https://wa.me/573142926642?text=" + encodeURIComponent(message);
+            if (image) { modalProductImage.src = image.getAttribute("src"); modalProductImage.alt = productName; }
+            productModal.classList.add("active");
+        }
+        function closeProductModal() { productModal.classList.remove("active"); }
+        productModal.addEventListener("click", function(event) { if (event.target === productModal) { closeProductModal(); } });
+    </script>
+</body>
+</html>
+
